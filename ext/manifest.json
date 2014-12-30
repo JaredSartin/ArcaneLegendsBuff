@@ -10,14 +10,10 @@
     "128": "icons/icon128.png"
   },
   "default_locale": "en",
-  "background": {
-    "page": "src/bg/background.html",
-    "persistent": true
-  },
-  "browser_action": {
+  "page_action": {
     "default_icon": "icons/icon19.png",
-    "default_title": "browser action demo",
-    "default_popup": "src/browser_action/browser_action.html"
+    "default_title": "page action demo",
+    "default_popup": "src/page_action/page_action.html"
   },
   "permissions": [
     "tabs",
