@@ -1,9 +1,9 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
+  "name": "Arcane Legends Buff",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
-  "homepage_url": "http://extensionizr.com",
+  "description": "Have a better experience playing Arcane Legends in your browser. Get a bigger full screen experience!",
+  "homepage_url": "http://jared.sart.in/albuff",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
@@ -22,7 +22,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://www.google.com/*"
+        "http://account.spacetimestudios.com/arcanelegends"
       ],
       "css": [
         "src/inject/inject.css"
@@ -30,7 +30,7 @@
     },
     {
       "matches": [
-        "https://www.google.com/*"
+        "http://account.spacetimestudios.com/arcanelegends"
       ],
       "js": [
         "src/inject/inject.js"
