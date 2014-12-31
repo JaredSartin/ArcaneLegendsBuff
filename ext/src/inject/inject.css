@@ -1,3 +1,56 @@
-/**
- * Place your custom CSS styles here.
- **/
+body.buffed-game #container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: -webkit-calc(100% - 30px);
+  margin: 30px 0 0 0;
+}
+
+body.buffed-game #background {
+  display: none;
+}
+
+body.buffed-game #top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  text-shadow: 1px 1px 0.1px rgba(255, 255, 255, 0.4);
+}
+
+body.buffed-game #resize-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+body.debuffed-game #resize-button {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -424px;
+  margin-left: 514px;
+  padding: 5px 5px 3px;
+  border-radius: 3px;
+  background: -webkit-linear-gradient(-45deg, #330b0b 0%,#8f0222 44%,#bb1111 100%);
+  border: 1px solid #CC1C1C;
+}
+
+// General
+#resize-button {
+  position: relative;
+  z-index: 999999999999;
+  width: 20px;
+  height: 20px;
+}
+#resize-button img {
+  width: 20px;
+  height: 20px;
+}
+#resize-button:hover {
+  cursor: pointer;
+}

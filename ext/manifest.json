@@ -2,7 +2,7 @@
   "name": "Arcane Legends Buff",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "Have a better experience playing Arcane Legends in your browser. Get a bigger full screen experience!",
+  "description": "Improve Arcane Legends in Chrome. Get a bigger full screen experience!",
   "homepage_url": "http://jared.sart.in/albuff",
   "icons": {
     "16": "icons/icon16.png",
@@ -17,12 +17,12 @@
   },
   "permissions": [
     "tabs",
-    "http://account.spacetimestudios.com/arcanelegends"
+    "http://account.spacetimestudios.com/arcanelegends/*"
   ],
   "content_scripts": [
     {
       "matches": [
-        "http://account.spacetimestudios.com/arcanelegends"
+        "http://account.spacetimestudios.com/arcanelegends/*"
       ],
       "css": [
         "src/inject/inject.css"
@@ -30,11 +30,14 @@
     },
     {
       "matches": [
-        "http://account.spacetimestudios.com/arcanelegends"
+        "http://account.spacetimestudios.com/arcanelegends/*"
       ],
       "js": [
         "src/inject/inject.js"
       ]
     }
+  ],
+  "web_accessible_resources": [
+    "src/images/*"
   ]
 }
