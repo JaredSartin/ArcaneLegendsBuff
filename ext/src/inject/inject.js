@@ -16,8 +16,10 @@ chrome.extension.sendMessage({}, function(response) {
       bodyEl.classList.toggle("debuffed-game");
       bodyEl.classList.toggle("buffed-game");
       if(isFullscreen) {
+        bodyEl.webkitRequestFullScreen.call(bodyEl);
         resizeButtonImg.src = chrome.extension.getURL("src/images/fullscreen-exit.png");
       } else {
+        document.webkitExitFullscreen();
         resizeButtonImg.src = chrome.extension.getURL("src/images/fullscreen.png");
       }
     };
@@ -28,12 +30,6 @@ chrome.extension.sendMessage({}, function(response) {
 
     resizeButton.appendChild(resizeButtonImg);
     bodyEl.appendChild(resizeButton);
-
-    // document.querySelectorAll("body")[0].classList.remove("debuffed-game");
-    //
-    // document.querySelectorAll("body")[0].classList.add("buffed-game");
-    // document.querySelectorAll("body")[0].classList.remove("buffed-game");
-
 	}
 	}, 10);
 });
