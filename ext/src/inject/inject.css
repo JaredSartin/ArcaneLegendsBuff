@@ -30,10 +30,8 @@ body.buffed-game #resize-button {
 
 body.debuffed-game #resize-button {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -424px;
-  margin-left: 514px;
+  top: 5px;
+  right: 5px;
   padding: 5px 5px 3px;
   border-radius: 3px;
   background: -webkit-linear-gradient(-45deg, #330b0b 0%,#8f0222 44%,#bb1111 100%);
