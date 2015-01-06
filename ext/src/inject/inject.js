@@ -8,6 +8,13 @@ chrome.extension.sendMessage({}, function(response) {
 
     var bodyEl = document.querySelectorAll("body")[0];
 
+    //////////////////////////////////////////
+    var s = document.createElement('script');
+    s.src = chrome.extension.getURL('src/js/embed.js');
+    s.onload = function() { this.parentNode.removeChild(this); };
+    (document.head||document.documentElement).appendChild(s);
+    /////////////////////////////////////////
+
     bodyEl.classList.add("debuffed-game");
 
     var resizeButton = document.createElement("div");
@@ -37,10 +44,10 @@ chrome.extension.sendMessage({}, function(response) {
 	}, 10);
 });
 
+// Setup for embeded script usage
 function hijackButtons() {
   var urls = document.querySelectorAll("div.url a");
   for(i in urls) {
-    console.log(urls[i]);
     if(urls[i].getAttribute) {
       var href = urls[i].getAttribute("href");
       var onclick = urls[i].getAttribute("onclick");
@@ -55,15 +62,3 @@ function hijackButtons() {
   };
 }
 
-function showPopover(url) {
-  console.log("TADA!");
-  // http://stackoverflow.com/questions/9515704/building-a-chrome-extension-inject-code-in-a-page-using-a-content-script
-  // Create iFrame
-  // Resize iFrame
-  // Append iFrame
-};
-
-function clearPopover() {
-  // Remove iFrame
-  // Clear iFrame storage
-};

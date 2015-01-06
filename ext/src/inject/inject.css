@@ -28,6 +28,14 @@ body.buffed-game #resize-button {
   right: 5px;
 }
 
+body.buffed-game .popover {
+  top: 60px !important;
+}
+
+body.buffed-game .close-popover {
+  top: 35px !important;
+}
+
 body.debuffed-game #resize-button {
   position: fixed;
   top: 5px;
@@ -50,5 +58,51 @@ body.debuffed-game #resize-button {
   height: 20px;
 }
 #resize-button:hover {
-  cursor: pointer;
+  cursor: default;
+}
+
+.popover {
+  z-inded: 10;
+  width: -webkit-calc(100% - 60px);
+  height: 600px;
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  border: 1px solid black;
+  box-shadow: 2px 0px 5px 5px black;
+}
+
+.shade {
+  z-inded: 5;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.4;
+  background: black;
+}
+
+.close-popover {
+  z-inded: 15;
+  position: fixed;
+  display: block;
+  top: 5px;
+  right: 5px;
+  padding: 5px;
+  border-radius: 3px;
+  background: -webkit-linear-gradient(-45deg, #330b0b 0%,#8f0222 44%,#bb1111 100%);
+  border: 1px solid #CC1C1C;
+  color: white;
+  font-size: 20px;
+  width: 20px;
+  text-align: center;
+  height: 20px;
+  line-height: 20px;
+}
+
+.close-popover:hover {
+  cursor: default;
+  color: white;
 }
